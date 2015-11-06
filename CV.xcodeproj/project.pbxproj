@@ -7,13 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05536CF51BEAA648001AE92E /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05536CF41BEAA648001AE92E /* Stats.swift */; };
+		05536CF71BEAB19B001AE92E /* Randoms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05536CF61BEAB19B001AE92E /* Randoms.swift */; };
 		058113B31BEA60EE00C0572A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058113B21BEA60EE00C0572A /* AppDelegate.swift */; };
 		058113B51BEA60EE00C0572A /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058113B41BEA60EE00C0572A /* FirstViewController.swift */; };
-		058113B71BEA60EE00C0572A /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058113B61BEA60EE00C0572A /* SecondViewController.swift */; };
+		058113B71BEA60EE00C0572A /* StreetCredVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058113B61BEA60EE00C0572A /* StreetCredVC.swift */; };
 		058113BA1BEA60EE00C0572A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 058113B81BEA60EE00C0572A /* Main.storyboard */; };
 		058113BC1BEA60EE00C0572A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058113BB1BEA60EE00C0572A /* Assets.xcassets */; };
 		058113BF1BEA60EE00C0572A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 058113BD1BEA60EE00C0572A /* LaunchScreen.storyboard */; };
 		058113CA1BEA60EE00C0572A /* CVUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058113C91BEA60EE00C0572A /* CVUITests.swift */; };
+		058113D61BEA79F200C0572A /* ChoicePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058113D51BEA79F200C0572A /* ChoicePresenter.swift */; };
+		058113D81BEA859200C0572A /* Choice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058113D71BEA859200C0572A /* Choice.swift */; };
+		05D4F9BA1BEB128F001B68CA /* PeopleAscii.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D4F9B91BEB128F001B68CA /* PeopleAscii.swift */; };
+		05D4F9D81BEB8C1E001B68CA /* PyramidOfDoomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D4F9D71BEB8C1E001B68CA /* PyramidOfDoomVC.swift */; };
+		05D4F9DA1BEB8D2C001B68CA /* PyramidAscii.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D4F9D91BEB8D2C001B68CA /* PyramidAscii.swift */; };
+		05D4F9DD1BEB9711001B68CA /* EventAscii.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D4F9DC1BEB9711001B68CA /* EventAscii.swift */; };
+		05D4F9DF1BEB9B57001B68CA /* EventArt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D4F9DE1BEB9B57001B68CA /* EventArt.swift */; };
+		05D4F9E11BEB9EA5001B68CA /* StatsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D4F9E01BEB9EA5001B68CA /* StatsScreen.swift */; };
+		05D4F9E31BEBCCC7001B68CA /* WebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D4F9E21BEBCCC7001B68CA /* WebVC.swift */; };
+		05D4F9E71BEC5E28001B68CA /* SCButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D4F9E61BEC5E28001B68CA /* SCButtons.swift */; };
+		05D4F9E91BEC613A001B68CA /* SCSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D4F9E81BEC613A001B68CA /* SCSegue.swift */; };
+		05D4F9EC1BEC62B4001B68CA /* WLoadURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D4F9EB1BEC62B4001B68CA /* WLoadURL.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,10 +41,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05536CF41BEAA648001AE92E /* Stats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Stats.swift; path = Pyramid/Stats.swift; sourceTree = "<group>"; };
+		05536CF61BEAB19B001AE92E /* Randoms.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Randoms.swift; path = Pyramid/Randoms.swift; sourceTree = "<group>"; };
 		058113AF1BEA60EE00C0572A /* CV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		058113B21BEA60EE00C0572A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		058113B41BEA60EE00C0572A /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		058113B61BEA60EE00C0572A /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		058113B61BEA60EE00C0572A /* StreetCredVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetCredVC.swift; sourceTree = "<group>"; };
 		058113B91BEA60EE00C0572A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		058113BB1BEA60EE00C0572A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		058113BE1BEA60EE00C0572A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +54,18 @@
 		058113C51BEA60EE00C0572A /* CVUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CVUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		058113C91BEA60EE00C0572A /* CVUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVUITests.swift; sourceTree = "<group>"; };
 		058113CB1BEA60EE00C0572A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		058113D51BEA79F200C0572A /* ChoicePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChoicePresenter.swift; path = Pyramid/ChoicePresenter.swift; sourceTree = "<group>"; };
+		058113D71BEA859200C0572A /* Choice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Choice.swift; path = Pyramid/Choice.swift; sourceTree = "<group>"; };
+		05D4F9B91BEB128F001B68CA /* PeopleAscii.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PeopleAscii.swift; path = Pyramid/PeopleAscii.swift; sourceTree = "<group>"; };
+		05D4F9D71BEB8C1E001B68CA /* PyramidOfDoomVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PyramidOfDoomVC.swift; sourceTree = "<group>"; };
+		05D4F9D91BEB8D2C001B68CA /* PyramidAscii.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PyramidAscii.swift; path = Pyramid/PyramidAscii.swift; sourceTree = "<group>"; };
+		05D4F9DC1BEB9711001B68CA /* EventAscii.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventAscii.swift; path = Pyramid/EventAscii.swift; sourceTree = "<group>"; };
+		05D4F9DE1BEB9B57001B68CA /* EventArt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventArt.swift; path = Pyramid/EventArt.swift; sourceTree = "<group>"; };
+		05D4F9E01BEB9EA5001B68CA /* StatsScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatsScreen.swift; path = Pyramid/StatsScreen.swift; sourceTree = "<group>"; };
+		05D4F9E21BEBCCC7001B68CA /* WebVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebVC.swift; sourceTree = "<group>"; };
+		05D4F9E61BEC5E28001B68CA /* SCButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCButtons.swift; path = StreetCred/SCButtons.swift; sourceTree = "<group>"; };
+		05D4F9E81BEC613A001B68CA /* SCSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCSegue.swift; path = StreetCred/SCSegue.swift; sourceTree = "<group>"; };
+		05D4F9EB1BEC62B4001B68CA /* WLoadURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WLoadURL.swift; path = Web/WLoadURL.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,9 +107,11 @@
 		058113B11BEA60EE00C0572A /* CV */ = {
 			isa = PBXGroup;
 			children = (
+				058113D41BEA79D200C0572A /* PyramidOfDoom */,
 				058113B21BEA60EE00C0572A /* AppDelegate.swift */,
 				058113B41BEA60EE00C0572A /* FirstViewController.swift */,
-				058113B61BEA60EE00C0572A /* SecondViewController.swift */,
+				05D4F9E41BEC5DFB001B68CA /* StreedCred */,
+				05D4F9EA1BEC6293001B68CA /* Web */,
 				058113B81BEA60EE00C0572A /* Main.storyboard */,
 				058113BB1BEA60EE00C0572A /* Assets.xcassets */,
 				058113BD1BEA60EE00C0572A /* LaunchScreen.storyboard */,
@@ -97,6 +127,58 @@
 				058113CB1BEA60EE00C0572A /* Info.plist */,
 			);
 			path = CVUITests;
+			sourceTree = "<group>";
+		};
+		058113D41BEA79D200C0572A /* PyramidOfDoom */ = {
+			isa = PBXGroup;
+			children = (
+				05D4F9D71BEB8C1E001B68CA /* PyramidOfDoomVC.swift */,
+				05D4F9ED1BEC6468001B68CA /* GameFiles */,
+				05D4F9DB1BEB96E9001B68CA /* AsciiArt */,
+			);
+			name = PyramidOfDoom;
+			sourceTree = "<group>";
+		};
+		05D4F9DB1BEB96E9001B68CA /* AsciiArt */ = {
+			isa = PBXGroup;
+			children = (
+				05D4F9B91BEB128F001B68CA /* PeopleAscii.swift */,
+				05D4F9D91BEB8D2C001B68CA /* PyramidAscii.swift */,
+				05D4F9DC1BEB9711001B68CA /* EventAscii.swift */,
+				05D4F9DE1BEB9B57001B68CA /* EventArt.swift */,
+			);
+			name = AsciiArt;
+			sourceTree = "<group>";
+		};
+		05D4F9E41BEC5DFB001B68CA /* StreedCred */ = {
+			isa = PBXGroup;
+			children = (
+				058113B61BEA60EE00C0572A /* StreetCredVC.swift */,
+				05D4F9E61BEC5E28001B68CA /* SCButtons.swift */,
+				05D4F9E81BEC613A001B68CA /* SCSegue.swift */,
+			);
+			name = StreedCred;
+			sourceTree = "<group>";
+		};
+		05D4F9EA1BEC6293001B68CA /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				05D4F9E21BEBCCC7001B68CA /* WebVC.swift */,
+				05D4F9EB1BEC62B4001B68CA /* WLoadURL.swift */,
+			);
+			name = Web;
+			sourceTree = "<group>";
+		};
+		05D4F9ED1BEC6468001B68CA /* GameFiles */ = {
+			isa = PBXGroup;
+			children = (
+				05D4F9E01BEB9EA5001B68CA /* StatsScreen.swift */,
+				058113D51BEA79F200C0572A /* ChoicePresenter.swift */,
+				058113D71BEA859200C0572A /* Choice.swift */,
+				05536CF41BEAA648001AE92E /* Stats.swift */,
+				05536CF61BEAB19B001AE92E /* Randoms.swift */,
+			);
+			name = GameFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,8 +282,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				058113B71BEA60EE00C0572A /* SecondViewController.swift in Sources */,
+				05D4F9E71BEC5E28001B68CA /* SCButtons.swift in Sources */,
+				058113B71BEA60EE00C0572A /* StreetCredVC.swift in Sources */,
+				05D4F9E31BEBCCC7001B68CA /* WebVC.swift in Sources */,
 				058113B31BEA60EE00C0572A /* AppDelegate.swift in Sources */,
+				05D4F9EC1BEC62B4001B68CA /* WLoadURL.swift in Sources */,
+				05D4F9DD1BEB9711001B68CA /* EventAscii.swift in Sources */,
+				05D4F9E11BEB9EA5001B68CA /* StatsScreen.swift in Sources */,
+				058113D61BEA79F200C0572A /* ChoicePresenter.swift in Sources */,
+				05D4F9E91BEC613A001B68CA /* SCSegue.swift in Sources */,
+				05536CF71BEAB19B001AE92E /* Randoms.swift in Sources */,
+				05D4F9BA1BEB128F001B68CA /* PeopleAscii.swift in Sources */,
+				05D4F9DA1BEB8D2C001B68CA /* PyramidAscii.swift in Sources */,
+				05536CF51BEAA648001AE92E /* Stats.swift in Sources */,
+				05D4F9D81BEB8C1E001B68CA /* PyramidOfDoomVC.swift in Sources */,
+				058113D81BEA859200C0572A /* Choice.swift in Sources */,
+				05D4F9DF1BEB9B57001B68CA /* EventArt.swift in Sources */,
 				058113B51BEA60EE00C0572A /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -390,6 +486,7 @@
 				058113D01BEA60EE00C0572A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		058113D11BEA60EE00C0572A /* Build configuration list for PBXNativeTarget "CVUITests" */ = {
 			isa = XCConfigurationList;
@@ -398,6 +495,7 @@
 				058113D31BEA60EE00C0572A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
