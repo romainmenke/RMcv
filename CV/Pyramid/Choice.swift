@@ -8,7 +8,9 @@
 
 import Foundation
 
-
+/**
+In Game Events
+*/
 struct Choice {
     
     var title : String = ""
@@ -24,6 +26,8 @@ struct Choice {
     
     init(title: String, alpha: String, beta: String, alphaResult: Stats, betaResult: Stats, alphaAnimation: EventArt?, betaAnimation: EventArt?) {
         self.title = title
+        
+        // randomize the position of the event options to prevent having all good/bad options left or right
         
         if randomBool() {
             left = alpha
@@ -43,9 +47,11 @@ struct Choice {
         
     }
     
+    // container for past events to prevent duplicate events
     static var pastChoices : [Int] = []
     
-    // 11 choices
+    // 11 preset choises
+    
     static let moses = Choice(title: "Moses speaks",
         alpha: "Send Guards",
         beta: "Burn Food",
@@ -152,6 +158,7 @@ struct Choice {
         
         var randomC = randomInt(0, secondNum: 9)
         
+        // this needs optimization, can theoratically create an infinite loop. convert to array that holds preset events and randomize the index
         while pastChoices.contains(randomC) {
             randomC = randomInt(0, secondNum: 9)
         }

@@ -18,6 +18,9 @@
 		058113CA1BEA60EE00C0572A /* CVUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058113C91BEA60EE00C0572A /* CVUITests.swift */; };
 		058113D61BEA79F200C0572A /* ChoicePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058113D51BEA79F200C0572A /* ChoicePresenter.swift */; };
 		058113D81BEA859200C0572A /* Choice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058113D71BEA859200C0572A /* Choice.swift */; };
+		05C5FEF81BED0FEF00078954 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C5FEF71BED0FEF00078954 /* Score.swift */; };
+		05C5FEFA1BED1FB300078954 /* ChoicePextensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C5FEF91BED1FB300078954 /* ChoicePextensions.swift */; };
+		05C5FEFC1BED2B3A00078954 /* PDTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C5FEFB1BED2B3A00078954 /* PDTimer.swift */; };
 		05D4F9BA1BEB128F001B68CA /* PeopleAscii.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D4F9B91BEB128F001B68CA /* PeopleAscii.swift */; };
 		05D4F9D81BEB8C1E001B68CA /* PyramidOfDoomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D4F9D71BEB8C1E001B68CA /* PyramidOfDoomVC.swift */; };
 		05D4F9DA1BEB8D2C001B68CA /* PyramidAscii.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D4F9D91BEB8D2C001B68CA /* PyramidAscii.swift */; };
@@ -28,6 +31,7 @@
 		05D4F9E71BEC5E28001B68CA /* SCButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D4F9E61BEC5E28001B68CA /* SCButtons.swift */; };
 		05D4F9E91BEC613A001B68CA /* SCSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D4F9E81BEC613A001B68CA /* SCSegue.swift */; };
 		05D4F9EC1BEC62B4001B68CA /* WLoadURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D4F9EB1BEC62B4001B68CA /* WLoadURL.swift */; };
+		05D4F9F11BECFA9A001B68CA /* PoDplist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D4F9F01BECFA9A001B68CA /* PoDplist.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +60,9 @@
 		058113CB1BEA60EE00C0572A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		058113D51BEA79F200C0572A /* ChoicePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChoicePresenter.swift; path = Pyramid/ChoicePresenter.swift; sourceTree = "<group>"; };
 		058113D71BEA859200C0572A /* Choice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Choice.swift; path = Pyramid/Choice.swift; sourceTree = "<group>"; };
+		05C5FEF71BED0FEF00078954 /* Score.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Score.swift; path = Pyramid/Score.swift; sourceTree = "<group>"; };
+		05C5FEF91BED1FB300078954 /* ChoicePextensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChoicePextensions.swift; path = Pyramid/ChoicePextensions.swift; sourceTree = "<group>"; };
+		05C5FEFB1BED2B3A00078954 /* PDTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PDTimer.swift; path = Pyramid/PDTimer.swift; sourceTree = "<group>"; };
 		05D4F9B91BEB128F001B68CA /* PeopleAscii.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PeopleAscii.swift; path = Pyramid/PeopleAscii.swift; sourceTree = "<group>"; };
 		05D4F9D71BEB8C1E001B68CA /* PyramidOfDoomVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PyramidOfDoomVC.swift; sourceTree = "<group>"; };
 		05D4F9D91BEB8D2C001B68CA /* PyramidAscii.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PyramidAscii.swift; path = Pyramid/PyramidAscii.swift; sourceTree = "<group>"; };
@@ -66,6 +73,7 @@
 		05D4F9E61BEC5E28001B68CA /* SCButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCButtons.swift; path = StreetCred/SCButtons.swift; sourceTree = "<group>"; };
 		05D4F9E81BEC613A001B68CA /* SCSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCSegue.swift; path = StreetCred/SCSegue.swift; sourceTree = "<group>"; };
 		05D4F9EB1BEC62B4001B68CA /* WLoadURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WLoadURL.swift; path = Web/WLoadURL.swift; sourceTree = "<group>"; };
+		05D4F9F01BECFA9A001B68CA /* PoDplist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PoDplist.swift; path = Pyramid/PoDplist.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,9 +182,13 @@
 			children = (
 				05D4F9E01BEB9EA5001B68CA /* StatsScreen.swift */,
 				058113D51BEA79F200C0572A /* ChoicePresenter.swift */,
+				05C5FEF91BED1FB300078954 /* ChoicePextensions.swift */,
 				058113D71BEA859200C0572A /* Choice.swift */,
 				05536CF41BEAA648001AE92E /* Stats.swift */,
 				05536CF61BEAB19B001AE92E /* Randoms.swift */,
+				05D4F9F01BECFA9A001B68CA /* PoDplist.swift */,
+				05C5FEF71BED0FEF00078954 /* Score.swift */,
+				05C5FEFB1BED2B3A00078954 /* PDTimer.swift */,
 			);
 			name = GameFiles;
 			sourceTree = "<group>";
@@ -287,6 +299,8 @@
 				05D4F9E31BEBCCC7001B68CA /* WebVC.swift in Sources */,
 				058113B31BEA60EE00C0572A /* AppDelegate.swift in Sources */,
 				05D4F9EC1BEC62B4001B68CA /* WLoadURL.swift in Sources */,
+				05C5FEFA1BED1FB300078954 /* ChoicePextensions.swift in Sources */,
+				05D4F9F11BECFA9A001B68CA /* PoDplist.swift in Sources */,
 				05D4F9DD1BEB9711001B68CA /* EventAscii.swift in Sources */,
 				05D4F9E11BEB9EA5001B68CA /* StatsScreen.swift in Sources */,
 				058113D61BEA79F200C0572A /* ChoicePresenter.swift in Sources */,
@@ -294,9 +308,11 @@
 				05536CF71BEAB19B001AE92E /* Randoms.swift in Sources */,
 				05D4F9BA1BEB128F001B68CA /* PeopleAscii.swift in Sources */,
 				05D4F9DA1BEB8D2C001B68CA /* PyramidAscii.swift in Sources */,
+				05C5FEF81BED0FEF00078954 /* Score.swift in Sources */,
 				05536CF51BEAA648001AE92E /* Stats.swift in Sources */,
 				05D4F9D81BEB8C1E001B68CA /* PyramidOfDoomVC.swift in Sources */,
 				058113D81BEA859200C0572A /* Choice.swift in Sources */,
+				05C5FEFC1BED2B3A00078954 /* PDTimer.swift in Sources */,
 				05D4F9DF1BEB9B57001B68CA /* EventArt.swift in Sources */,
 				058113B51BEA60EE00C0572A /* FirstViewController.swift in Sources */,
 			);

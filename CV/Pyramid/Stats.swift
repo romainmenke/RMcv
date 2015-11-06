@@ -8,8 +8,6 @@
 
 import Foundation
 
-
-
 struct Stats {
     
     var slaves : Int = 0
@@ -24,72 +22,61 @@ struct Stats {
     
     let count = 9
     
+}
+
+extension Stats {
+    /**
+    Update stats each in game year
+    */
     mutating func yearPassed() {
         slaves += 20 + (food / 200)
         guards += 1
         rebels += 1
         followers += 1
         plagues += 0
-        food += 5 - ((slaves - 1200) / 80)
         cats += 1
+        
+        // prevent sub-zero
+        food += 5 - ((slaves - 1200) / 80)
+        if food < 0 {
+            food = 0
+        }
+        
+        // prevent sub-zero
         yearsLeft -= 1
         if yearsLeft < 0 {
             yearsLeft = 0
         }
     }
-    
-}
-
-internal struct StatsGenerator: GeneratorType {
-    
-    let value: Stats
-    var indexInSequence = 0
-    
-    init(value: Stats) {
-        self.value = value
-    }
-    
-    mutating internal func next() -> Int? {
-        
-        if !(indexInSequence < 9) {
-            indexInSequence = 0
-            return nil
-        }
-        
-        switch indexInSequence {
-        case 0 :
-            return value.slaves
-        case 1 :
-            return value.guards
-        case 2 :
-            return value.rebels
-        case 3 :
-            return value.followers
-        case 4 :
-            return value.plagues
-        case 5 :
-            return value.food
-        case 6 :
-            return value.gold
-        case 7 :
-            return value.yearsLeft
-        case 8 :
-            return value.cats
-
-        default :
-            return nil
-        }
-    }
-}
-
-extension Stats: SequenceType {
-    internal func generate() -> StatsGenerator {
-        return StatsGenerator(value: self)
-    }
 }
 
 extension Stats {
     
+    /**
+    Convert Stats to Score
+    */
+    func highScore() -> Score {
+    
+        var gameScore : Int = 0
+        gameScore += slaves
+        gameScore += guards * 10
+        gameScore -= rebels * 10
+        gameScore += followers * 20
+        gameScore += food
+        gameScore += yearsLeft * 100
+        
+        let score = Score(cats: cats, life: yearsLeft, game: gameScore)
+        return score
+    
+    }
+    
+}
+
+extension Stats {
+    
+    /**
+    Modifiers for stats to convert to build speed
+    */
     func modifier(valueIndex:Int) -> Double {
 
         switch valueIndex {
@@ -121,6 +108,12 @@ extension Stats {
 
 extension Stats {
     
+    /**
+    The build speed of the pyramid.
+    
+    Use this as a Timer Interval to build the pyramid
+    
+    */
     var buildSpeed : Double {
         
         get {
@@ -135,14 +128,15 @@ extension Stats {
                 
                 tempSpeed += result
             }
-            
-            return (1000 / tempSpeed) / 1.5
+            return (1000 / tempSpeed) / 1.7 // last divider is for balance. Increase to Speed Up, Decrease to Slow Down. Default is 1.7
         }
     }
 }
 
+
 extension Stats {
     
+    // convenience subscript to get sum of two stats.
     subscript (index:Int) -> Int {
         
         get {
