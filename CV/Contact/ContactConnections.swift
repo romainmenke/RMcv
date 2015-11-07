@@ -1,5 +1,5 @@
 //
-//  ContactVC.swift
+//  ContactConnections.swift
 //  CV
 //
 //  Created by Romain Menke on 07/11/15.
@@ -9,39 +9,7 @@
 import UIKit
 import MessageUI
 
-class ContactVC: UIViewController, MFMailComposeViewControllerDelegate {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    @IBAction func makeCall(sender: AnyObject) {
-        
-        email()
-        
-    }
-
-}
-
-
-extension ContactVC {
+extension CallVC {
     
     func call() {
         
@@ -52,7 +20,7 @@ extension ContactVC {
     }
 }
 
-extension ContactVC {
+extension MailVC {
     
     
     func email() {
@@ -66,10 +34,10 @@ extension ContactVC {
         
     }
     
-    func configuredMailComposeViewController() -> MFMailComposeViewController {
+    private func configuredMailComposeViewController() -> MFMailComposeViewController {
         let mailComposerVC = MFMailComposeViewController()
         mailComposerVC.mailComposeDelegate = self // Extremely important to set the --mailComposeDelegate-- property, NOT the --delegate-- property
-
+        
         
         if let highScore = getSaveData() {
             mailComposerVC.setMessageBody("Your message goes here \n \n \n \n \n Pyramid of Doom score : \(highScore.gameScore)", isHTML: false)
@@ -84,7 +52,7 @@ extension ContactVC {
         return mailComposerVC
     }
     
-    func showSendMailErrorAlert() {
+    private func showSendMailErrorAlert() {
         
         let alertController = UIAlertController(title: "Email could not be send", message: "Please check your e-mail configurations and try again.", preferredStyle: UIAlertControllerStyle.Alert)
         
@@ -93,10 +61,9 @@ extension ContactVC {
         alertController.addAction(alert)
         
         self.presentViewController(alertController, animated: true, completion: nil)
-
+        
     }
     
-    // MARK: MFMailComposeViewControllerDelegate
     
     func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
         controller.dismissViewControllerAnimated(true, completion: nil)
@@ -105,9 +72,9 @@ extension ContactVC {
     
 }
 
-extension ContactVC {
+extension MailVC {
     
-    private func getSaveData() -> Score? {
+    func getSaveData() -> Score? {
         
         guard let documentsURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first else {
             return nil

@@ -11,7 +11,7 @@ import Foundation
 
 extension Choice {
     
-    // 11 preset choises
+    // 13 preset choises
     
     static let moses = Choice(title: "Moses speaks",
         alpha: "Send Guards",
@@ -106,12 +106,33 @@ extension Choice {
     )
     
     static let birthday = Choice(title: "It's Your Birthday",
-        alpha: "Build Another Statue Of Me",
+        alpha: "Build Another Statue",
         beta: "Free Meals For Everyone",
-        alphaResult: Stats(slaves: -109, guards: 0, rebels: 0, followers: 0, plagues: 0, food: 0, gold: 0, yearsLeft: 0, cats: 0),
+        alphaResult: Stats(slaves: -100, guards: 0, rebels: 0, followers: 0, plagues: 0, food: 0, gold: 0, yearsLeft: 0, cats: 0),
         betaResult: Stats(slaves: 50, guards: 0, rebels: -100, followers: 0, plagues: 0, food: -100, gold: 0, yearsLeft: 0, cats: 0),
         alphaAnimation: nil,
         betaAnimation: nil
     )
+
+    static let bob = Choice(title: "Forgot favorite slave in Sealed Room",
+        alpha: "Rescue Bob",
+        beta: "Who's Bob?",
+        alphaResult: Stats(slaves: -50, guards: 0, rebels: -50, followers: 0, plagues: 0, food: 0, gold: 0, yearsLeft: 0, cats: 0),
+        betaResult: Stats(slaves: -1, guards: 0, rebels: 50, followers: 0, plagues: 0, food: 0, gold: 0, yearsLeft: 0, cats: 0),
+        alphaAnimation: nil,
+        betaAnimation: nil
+    )
+    
+    static let aliens = Choice(title: "Aliens saw your work and stopped by",
+        alpha: "Enslave the aliens",
+        beta: "Have a Galactic party",
+        alphaResult: Stats(slaves: 200, guards: 0, rebels: 0, followers: 0, plagues: 0, food: 0, gold: 0, yearsLeft: 0, cats: 0),
+        betaResult: Stats(slaves: 0, guards: 0, rebels: -50, followers: 50, plagues: 0, food: -50, gold: 0, yearsLeft: 5, cats: 0),
+        alphaAnimation: nil,
+        betaAnimation: nil
+    )
+    
+    // snow
+    //
     
 }

@@ -12,19 +12,13 @@ import Foundation
 extension Choice {
     
     // container for past events to prevent duplicates
-    static var pastChoices : [Int] = []
-    
+    static var presetChoices : [Int] = [0,1,2,3,4,5,6,7,8,9,10,11,12]
     
     static func randomChoice() -> Choice {
         
-        var randomC = randomInt(0, secondNum: 9)
-        
-        // this needs optimization, can theoratically create an infinite loop. convert to array that holds preset events and randomize the index
-        while pastChoices.contains(randomC) {
-            randomC = randomInt(0, secondNum: 9)
-        }
-        
-        pastChoices.append(randomC)
+        let randomIndex = randomInt(0, secondNum: presetChoices.count - 1)
+        let randomC = presetChoices[randomIndex]
+        presetChoices.removeAtIndex(randomIndex)
         
         switch randomC {
         case 0 :
@@ -49,6 +43,10 @@ extension Choice {
             return Choice.anotherDay
         case 10 :
             return Choice.birthday
+        case 11 :
+            return Choice.bob
+        case 12 :
+            return Choice.aliens
         default :
             return Choice.birthday
         }

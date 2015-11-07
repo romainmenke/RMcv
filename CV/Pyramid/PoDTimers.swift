@@ -33,9 +33,9 @@ extension PyramidOfDoomVC {
     }
     
     func setupTimers() {
-        yearTimer = PDTimer(timeInterval: 1.0, selector: yearLoop, repeats: true)
+        yearTimer = PDTimer(timeInterval: 1.5, selector: yearLoop, repeats: true)
         buildingTimer = PDTimer(timeInterval: currentStats.buildSpeed, selector: buildLoop, repeats: true)
-        eventTimer = PDTimer(timeInterval: 6.0, selector: eventLoop, repeats: true)
+        eventTimer = PDTimer(timeInterval: 5.0, selector: eventLoop, repeats: true)
         peopleTimer = PDTimer(timeInterval: 0.1, selector: moveLoop, repeats: true)
     }
     

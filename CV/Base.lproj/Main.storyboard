@@ -6,10 +6,30 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Contact-->
+        <!--Email-->
+        <scene sceneID="MG6-hY-wsh">
+            <objects>
+                <viewController id="Dmw-iD-gUV" customClass="MailVC" customModule="CV" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2xk-Vn-FDT"/>
+                        <viewControllerLayoutGuide type="bottom" id="9X5-9O-tO8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5bx-GM-fuB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Email" image="at" id="Ahd-zD-MwQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vo5-gG-PyS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="744" y="-1692"/>
+        </scene>
+        <!--Call Me-->
         <scene sceneID="AfL-kG-s02">
             <objects>
-                <viewController id="t82-uj-dIY" customClass="ContactVC" customModule="CV" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="t82-uj-dIY" customClass="CallVC" customModule="CV" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Pvq-pe-eZB"/>
                         <viewControllerLayoutGuide type="bottom" id="QSA-2E-N0a"/>
@@ -17,26 +37,10 @@
                     <view key="view" contentMode="scaleToFill" id="L1o-1o-Xuj">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y0F-Fb-zaY">
-                                <rect key="frame" x="277" y="285" width="46" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Call">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="makeCall:" destination="t82-uj-dIY" eventType="touchUpInside" id="kp5-y0-wAg"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Y0F-Fb-zaY" firstAttribute="centerY" secondItem="L1o-1o-Xuj" secondAttribute="centerY" id="BRd-CE-HRu"/>
-                            <constraint firstItem="Y0F-Fb-zaY" firstAttribute="centerX" secondItem="L1o-1o-Xuj" secondAttribute="centerX" id="xk8-fs-rVO"/>
-                        </constraints>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Contact" id="6Az-MV-kL6"/>
+                    <tabBarItem key="tabBarItem" title="Call Me" image="phone" id="6Az-MV-kL6"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AxI-J1-F1F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -85,7 +89,7 @@
             </objects>
             <point key="canvasLocation" x="750" y="360"/>
         </scene>
-        <!--Pyramid of Doom-->
+        <!--PoD-->
         <scene sceneID="9fZ-pX-wyW">
             <objects>
                 <viewController id="lbs-rt-QHe" customClass="PyramidOfDoomVC" customModule="CV" customModuleProvider="target" sceneMemberID="viewController">
@@ -99,7 +103,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Pyramid of Doom" image="pyramidImage" id="518-f0-vCp"/>
+                    <tabBarItem key="tabBarItem" title="PoD" image="pyramidImage" id="518-f0-vCp"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lwB-Hl-f2N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -176,8 +180,9 @@
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
-                        <segue destination="t82-uj-dIY" kind="relationship" relationship="viewControllers" id="ibe-CI-RrO"/>
                         <segue destination="lbs-rt-QHe" kind="relationship" relationship="viewControllers" id="Qws-0l-wWF"/>
+                        <segue destination="Dmw-iD-gUV" kind="relationship" relationship="viewControllers" id="G3D-nB-ASG"/>
+                        <segue destination="t82-uj-dIY" kind="relationship" relationship="viewControllers" id="ibe-CI-RrO"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -205,7 +210,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="at" width="40" height="40"/>
         <image name="first" width="30" height="30"/>
+        <image name="phone" width="40" height="40"/>
         <image name="pyramidImage" width="40" height="40"/>
         <image name="starImage" width="40" height="40"/>
     </resources>
