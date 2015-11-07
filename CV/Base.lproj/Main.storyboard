@@ -9,7 +9,7 @@
         <!--Contact-->
         <scene sceneID="AfL-kG-s02">
             <objects>
-                <viewController id="t82-uj-dIY" sceneMemberID="viewController">
+                <viewController id="t82-uj-dIY" customClass="ContactVC" customModule="CV" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Pvq-pe-eZB"/>
                         <viewControllerLayoutGuide type="bottom" id="QSA-2E-N0a"/>
@@ -17,8 +17,24 @@
                     <view key="view" contentMode="scaleToFill" id="L1o-1o-Xuj">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y0F-Fb-zaY">
+                                <rect key="frame" x="277" y="285" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Call">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="makeCall:" destination="t82-uj-dIY" eventType="touchUpInside" id="kp5-y0-wAg"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Y0F-Fb-zaY" firstAttribute="centerY" secondItem="L1o-1o-Xuj" secondAttribute="centerY" id="BRd-CE-HRu"/>
+                            <constraint firstItem="Y0F-Fb-zaY" firstAttribute="centerX" secondItem="L1o-1o-Xuj" secondAttribute="centerX" id="xk8-fs-rVO"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Contact" id="6Az-MV-kL6"/>
                 </viewController>

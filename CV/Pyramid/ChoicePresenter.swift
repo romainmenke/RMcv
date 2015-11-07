@@ -70,4 +70,15 @@ class ChoicePresenter : UIView {
 
 
 
+// delegate for CP
+protocol ChoiceDelegate {
+    
+    /**
+     Delegate function to handle button click
+     
+     This method is triggered by button clicks in the ChoicePresenter. Use it to send stats and start event animation
+     */
+    func theChoseOne(statsMod: Stats, animation: EventArt?)
+    
+}
 

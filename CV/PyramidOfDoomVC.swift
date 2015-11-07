@@ -12,9 +12,10 @@ class PyramidOfDoomVC: UIViewController, PyramidDelegate, ChoiceDelegate {
     
     var currentStats = Stats(slaves: 1000, guards: 200, rebels: 50, followers: 50, plagues: 0, food: 200, gold: 0, yearsLeft: 35, cats: 2)
     
-    var yearTimer = NSTimer()
-    var buildingTimer = NSTimer()
-    var eventTimer = NSTimer()
+    var yearTimer = PDTimer()
+    var buildingTimer = PDTimer()
+    var eventTimer = PDTimer()
+    var peopleTimer = PDTimer()
     
     var pyr : PyramidAscii!
     
@@ -66,7 +67,7 @@ class PyramidOfDoomVC: UIViewController, PyramidDelegate, ChoiceDelegate {
             
             score.updateStats(currentStats)
         }
-        
+        setupTimers()
         startTimers()
     }
     
@@ -83,60 +84,30 @@ class PyramidOfDoomVC: UIViewController, PyramidDelegate, ChoiceDelegate {
         return true
     }
     
-    func yearLoop() {
-        
-        if !alive {
-            return
-        }
-        
-        currentStats.yearPassed()
-        score.updateStats(currentStats)
-        
-        if currentStats.yearsLeft <= 0 {
-            died()
-        }
-    }
-    
-    func buildLoop() {
-        
-        if !alive {
-            return
-        }
-        
-        buildingTimer.invalidate()
-        buildingTimer = NSTimer.scheduledTimerWithTimeInterval(currentStats.buildSpeed, target: self, selector: Selector("buildLoop"), userInfo: nil, repeats: true)
-        
-        pyr.build()
-    }
-    
-    func eventLoop() {
-        
-        if !alive {
-            return
-        }
-        
-        choiceView = ChoicePresenter(containerSize: self.view.frame.size)
-        choiceView!.delegate = self
-        self.view.addSubview(choiceView!)
-        
-        pauseTimers()
-        
-    }
     
     func buildingComplete() {
-        pauseTimers()
-        people.removeFromSuperview()
+        result(true)
     }
     
-    func died() {
+    
+    func result(alive:Bool) {
         
+        pauseTimers()
+        newScore(currentStats.score)
+        
+        people.removeFromSuperview()
+        pyr.removeFromSuperview()
+        score.removeFromSuperview()
         if let eventV = eventView {
             eventV.removeFromSuperview()
         }
-        people.removeFromSuperview()
-        pauseTimers()
-        alive = false
         
+        if let choiceV = choiceView {
+            choiceV.removeFromSuperview()
+        }
+        
+        let resultView = ScoreScreen(containerSize: self.view.frame.size, stats: currentStats)
+        self.view.addSubview(resultView)
         
     }
     
@@ -156,35 +127,14 @@ class PyramidOfDoomVC: UIViewController, PyramidDelegate, ChoiceDelegate {
         score.updateStats(currentStats)
         
         if alive {
-            startTimers()
+            peopleTimer.resume()
+            buildingTimer.resume()
+            eventTimer.start()
+            yearTimer.resume()
         }
         
         
         
     }
-    
-    func pauseTimers() {
-        yearTimer.invalidate()
-        buildingTimer.invalidate()
-        eventTimer.invalidate()
-        people.stop()
-    }
-    
-    func startTimers() {
-        yearTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("yearLoop"), userInfo: nil, repeats: true)
-        buildingTimer = NSTimer.scheduledTimerWithTimeInterval(currentStats.buildSpeed, target: self, selector: Selector("buildLoop"), userInfo: nil, repeats: true)
-        eventTimer = NSTimer.scheduledTimerWithTimeInterval(6.0, target: self, selector: Selector("eventLoop"), userInfo: nil, repeats: true)
-        people.start()
-    }
-    
-    /*
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    // Get the new view controller using segue.destinationViewController.
-    // Pass the selected object to the new view controller.
-    }
-    */
     
 }

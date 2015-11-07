@@ -20,13 +20,14 @@ struct Stats {
     var yearsLeft : Int = 35
     var cats : Int = 0
     
+    // convenience method to get the number of stats, used with subscript.
     let count = 9
     
 }
 
 extension Stats {
     /**
-    Update stats each in game year
+    Update stats after in game year
     */
     mutating func yearPassed() {
         slaves += 20 + (food / 200)
@@ -55,7 +56,13 @@ extension Stats {
     /**
     Convert Stats to Score
     */
-    func highScore() -> Score {
+    var score : Score {
+        get {
+            return getScore()
+        }
+    }
+    
+    private func getScore() -> Score {
     
         var gameScore : Int = 0
         gameScore += slaves
@@ -78,7 +85,7 @@ extension Stats {
     Modifiers for stats to convert to build speed
     */
     func modifier(valueIndex:Int) -> Double {
-
+        
         switch valueIndex {
         case 0 :
             return 0.8
