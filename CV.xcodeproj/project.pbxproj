@@ -40,7 +40,8 @@
 		05F3427C1BEE590800B75C84 /* ContactConnections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F3427B1BEE590800B75C84 /* ContactConnections.swift */; };
 		05F3427E1BEE5A8800B75C84 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F3427D1BEE5A8800B75C84 /* TabBar.swift */; };
 		05F342801BEE5B6E00B75C84 /* CallVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F3427F1BEE5B6E00B75C84 /* CallVC.swift */; };
-		05F342831BEF1CDC00B75C84 /* AboutScrolItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F342821BEF1CDC00B75C84 /* AboutScrolItem.swift */; };
+		05F342831BEF1CDC00B75C84 /* AboutScrolItemText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F342821BEF1CDC00B75C84 /* AboutScrolItemText.swift */; };
+		05F342851BEFC99200B75C84 /* AboutScrollItemImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F342841BEFC99200B75C84 /* AboutScrollItemImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,7 +92,8 @@
 		05F3427B1BEE590800B75C84 /* ContactConnections.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactConnections.swift; path = Contact/ContactConnections.swift; sourceTree = "<group>"; };
 		05F3427D1BEE5A8800B75C84 /* TabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		05F3427F1BEE5B6E00B75C84 /* CallVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallVC.swift; sourceTree = "<group>"; };
-		05F342821BEF1CDC00B75C84 /* AboutScrolItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AboutScrolItem.swift; path = About/AboutScrolItem.swift; sourceTree = "<group>"; };
+		05F342821BEF1CDC00B75C84 /* AboutScrolItemText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AboutScrolItemText.swift; path = About/AboutScrolItemText.swift; sourceTree = "<group>"; };
+		05F342841BEFC99200B75C84 /* AboutScrollItemImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AboutScrollItemImage.swift; path = About/AboutScrollItemImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,7 +265,8 @@
 			isa = PBXGroup;
 			children = (
 				058113B41BEA60EE00C0572A /* AboutVC.swift */,
-				05F342821BEF1CDC00B75C84 /* AboutScrolItem.swift */,
+				05F342821BEF1CDC00B75C84 /* AboutScrolItemText.swift */,
+				05F342841BEFC99200B75C84 /* AboutScrollItemImage.swift */,
 			);
 			name = About;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				05D4F9E71BEC5E28001B68CA /* SCButtons.swift in Sources */,
+				05F342851BEFC99200B75C84 /* AboutScrollItemImage.swift in Sources */,
 				058113B71BEA60EE00C0572A /* StreetCredVC.swift in Sources */,
 				05C5FF031BED7D3700078954 /* ChoiceRandom.swift in Sources */,
 				05D4F9E31BEBCCC7001B68CA /* WebVC.swift in Sources */,
@@ -383,7 +387,7 @@
 				05C5FF061BED8C3200078954 /* PoDTimers.swift in Sources */,
 				05D4F9E11BEB9EA5001B68CA /* StatsScreen.swift in Sources */,
 				058113D61BEA79F200C0572A /* ChoicePresenter.swift in Sources */,
-				05F342831BEF1CDC00B75C84 /* AboutScrolItem.swift in Sources */,
+				05F342831BEF1CDC00B75C84 /* AboutScrolItemText.swift in Sources */,
 				05D4F9E91BEC613A001B68CA /* SCSegue.swift in Sources */,
 				05536CF71BEAB19B001AE92E /* Randoms.swift in Sources */,
 				05D4F9BA1BEB128F001B68CA /* PeopleAscii.swift in Sources */,

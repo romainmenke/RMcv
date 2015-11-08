@@ -57,10 +57,26 @@
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D8R-W1-plf">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="D8R-W1-plf" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="topMargin" id="RAw-2C-0qF"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="D8R-W1-plf" secondAttribute="bottom" id="d7h-WK-9g5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="D8R-W1-plf" secondAttribute="trailing" constant="-20" id="fRT-Fp-2MG"/>
+                            <constraint firstItem="D8R-W1-plf" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-20" id="uLi-F0-wT8"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="About Me" image="face" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="constraintsView" destination="D8R-W1-plf" id="bHt-9d-iu5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>

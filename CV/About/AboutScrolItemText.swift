@@ -9,7 +9,7 @@
 import UIKit
 
 
-class AScrollItem : UIView {
+class ATextScrollItem : UIView {
     
     
     let label : UILabel
@@ -18,8 +18,8 @@ class AScrollItem : UIView {
     let font = UIFont(name: "DamascusLight", size: UIFont.systemFontSize() - 3)
     
     override init(frame: CGRect) {
-        label = UILabel(frame: CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height - 3))
-        border = UIView(frame: CGRect(x: 50, y: frame.size.height - 3, width: frame.size.width - 100, height: 3))
+        label = UILabel(frame: CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height - 2))
+        border = UIView(frame: CGRect(x: 50, y: frame.size.height - 2, width: frame.size.width - 100, height: 2))
         
         label.numberOfLines = 3
         label.font = font
