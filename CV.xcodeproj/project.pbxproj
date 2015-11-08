@@ -42,6 +42,8 @@
 		05F342801BEE5B6E00B75C84 /* CallVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F3427F1BEE5B6E00B75C84 /* CallVC.swift */; };
 		05F342831BEF1CDC00B75C84 /* AboutScrolItemText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F342821BEF1CDC00B75C84 /* AboutScrolItemText.swift */; };
 		05F342851BEFC99200B75C84 /* AboutScrollItemImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F342841BEFC99200B75C84 /* AboutScrollItemImage.swift */; };
+		05F342871BF006DB00B75C84 /* AboutScrollItemBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F342861BF006DB00B75C84 /* AboutScrollItemBadge.swift */; };
+		05F3428A1BF00D7800B75C84 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F342891BF00D7800B75C84 /* UIViewExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +96,8 @@
 		05F3427F1BEE5B6E00B75C84 /* CallVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallVC.swift; sourceTree = "<group>"; };
 		05F342821BEF1CDC00B75C84 /* AboutScrolItemText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AboutScrolItemText.swift; path = About/AboutScrolItemText.swift; sourceTree = "<group>"; };
 		05F342841BEFC99200B75C84 /* AboutScrollItemImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AboutScrollItemImage.swift; path = About/AboutScrollItemImage.swift; sourceTree = "<group>"; };
+		05F342861BF006DB00B75C84 /* AboutScrollItemBadge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AboutScrollItemBadge.swift; path = About/AboutScrollItemBadge.swift; sourceTree = "<group>"; };
+		05F342891BF00D7800B75C84 /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewExtensions.swift; path = General/UIViewExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +139,7 @@
 		058113B11BEA60EE00C0572A /* CV */ = {
 			isa = PBXGroup;
 			children = (
+				05F342881BF00D6400B75C84 /* General */,
 				058113B21BEA60EE00C0572A /* AppDelegate.swift */,
 				05F342811BEF1CAC00B75C84 /* About */,
 				058113D41BEA79D200C0572A /* PyramidOfDoom */,
@@ -267,8 +272,17 @@
 				058113B41BEA60EE00C0572A /* AboutVC.swift */,
 				05F342821BEF1CDC00B75C84 /* AboutScrolItemText.swift */,
 				05F342841BEFC99200B75C84 /* AboutScrollItemImage.swift */,
+				05F342861BF006DB00B75C84 /* AboutScrollItemBadge.swift */,
 			);
 			name = About;
+			sourceTree = "<group>";
+		};
+		05F342881BF00D6400B75C84 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				05F342891BF00D7800B75C84 /* UIViewExtensions.swift */,
+			);
+			name = General;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -373,6 +387,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				05D4F9E71BEC5E28001B68CA /* SCButtons.swift in Sources */,
+				05F342871BF006DB00B75C84 /* AboutScrollItemBadge.swift in Sources */,
 				05F342851BEFC99200B75C84 /* AboutScrollItemImage.swift in Sources */,
 				058113B71BEA60EE00C0572A /* StreetCredVC.swift in Sources */,
 				05C5FF031BED7D3700078954 /* ChoiceRandom.swift in Sources */,
@@ -393,6 +408,7 @@
 				05D4F9BA1BEB128F001B68CA /* PeopleAscii.swift in Sources */,
 				05D4F9DA1BEB8D2C001B68CA /* PyramidAscii.swift in Sources */,
 				05C5FEF81BED0FEF00078954 /* Score.swift in Sources */,
+				05F3428A1BF00D7800B75C84 /* UIViewExtensions.swift in Sources */,
 				05536CF51BEAA648001AE92E /* Stats.swift in Sources */,
 				05D4F9D81BEB8C1E001B68CA /* PyramidOfDoomVC.swift in Sources */,
 				05F342791BEDBD1000B75C84 /* ScoreScreen.swift in Sources */,

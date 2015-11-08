@@ -66,6 +66,14 @@ extension AboutVC {
         
         var lastFrame : CGRect?
         
+        let nameView = UIImageView(frame: constraintsView.frame)
+        nameView.frame.size.height = 75
+        nameView.frame.origin.y += 25
+        nameView.image = UIImage(named: "rm")
+        nameView.contentMode = UIViewContentMode.ScaleAspectFit
+        scrollView.addSubview(nameView)
+        lastFrame = nameView.frame
+        
         for statement in AboutVC.statements {
             
             let scrollItem = ATextScrollItem(containerSize: constraintsView.frame.size, lastFrame: lastFrame)
@@ -81,11 +89,13 @@ extension AboutVC {
         }
         
         let skillView = AImageScrollItem(frame: CGRect(x: 50, y: uwLastFrame.origin.y + uwLastFrame.size.height + 25, width: constraintsView.frame.width - 100, height: constraintsView.frame.width - 100), image: UIImage(named: "skills"))
-        
         self.scrollView.addSubview(skillView)
         
+        let badgeView = ABadgeContainer(origin: CGPoint(x: 0, y: skillView.bottomLeft.y), width: constraintsView.frame.size.width)
+        self.scrollView.addSubview(badgeView)
+        
         if let lastSubview = self.scrollView.subviews.last {
-            self.scrollView.contentSize.height = lastSubview.frame.origin.y + lastSubview.frame.size.height + CGFloat(50)
+            self.scrollView.contentSize.height = lastSubview.bottomLeft.y + CGFloat(50)
         }
         
     }
