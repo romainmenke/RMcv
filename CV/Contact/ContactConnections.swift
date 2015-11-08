@@ -66,7 +66,16 @@ extension MailVC {
     
     
     func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
-        controller.dismissViewControllerAnimated(true, completion: nil)
+        controller.dismissViewControllerAnimated(true) { () -> Void in
+            
+            self.mailing = false
+            
+            guard let window = UIApplication.sharedApplication().windows.first, let tabBar = window.rootViewController as? UITabBarController else {
+                return
+            }
+            
+            tabBar.selectedIndex = 0
+        }
         
     }
     

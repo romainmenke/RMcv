@@ -10,7 +10,7 @@
 		05536CF51BEAA648001AE92E /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05536CF41BEAA648001AE92E /* Stats.swift */; };
 		05536CF71BEAB19B001AE92E /* Randoms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05536CF61BEAB19B001AE92E /* Randoms.swift */; };
 		058113B31BEA60EE00C0572A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058113B21BEA60EE00C0572A /* AppDelegate.swift */; };
-		058113B51BEA60EE00C0572A /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058113B41BEA60EE00C0572A /* FirstViewController.swift */; };
+		058113B51BEA60EE00C0572A /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058113B41BEA60EE00C0572A /* AboutVC.swift */; };
 		058113B71BEA60EE00C0572A /* StreetCredVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058113B61BEA60EE00C0572A /* StreetCredVC.swift */; };
 		058113BA1BEA60EE00C0572A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 058113B81BEA60EE00C0572A /* Main.storyboard */; };
 		058113BC1BEA60EE00C0572A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058113BB1BEA60EE00C0572A /* Assets.xcassets */; };
@@ -40,6 +40,7 @@
 		05F3427C1BEE590800B75C84 /* ContactConnections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F3427B1BEE590800B75C84 /* ContactConnections.swift */; };
 		05F3427E1BEE5A8800B75C84 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F3427D1BEE5A8800B75C84 /* TabBar.swift */; };
 		05F342801BEE5B6E00B75C84 /* CallVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F3427F1BEE5B6E00B75C84 /* CallVC.swift */; };
+		05F342831BEF1CDC00B75C84 /* AboutScrolItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F342821BEF1CDC00B75C84 /* AboutScrolItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +58,7 @@
 		05536CF61BEAB19B001AE92E /* Randoms.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Randoms.swift; path = Pyramid/Randoms.swift; sourceTree = "<group>"; };
 		058113AF1BEA60EE00C0572A /* CV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		058113B21BEA60EE00C0572A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		058113B41BEA60EE00C0572A /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		058113B41BEA60EE00C0572A /* AboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
 		058113B61BEA60EE00C0572A /* StreetCredVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetCredVC.swift; sourceTree = "<group>"; };
 		058113B91BEA60EE00C0572A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		058113BB1BEA60EE00C0572A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -90,6 +91,7 @@
 		05F3427B1BEE590800B75C84 /* ContactConnections.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactConnections.swift; path = Contact/ContactConnections.swift; sourceTree = "<group>"; };
 		05F3427D1BEE5A8800B75C84 /* TabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		05F3427F1BEE5B6E00B75C84 /* CallVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallVC.swift; sourceTree = "<group>"; };
+		05F342821BEF1CDC00B75C84 /* AboutScrolItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AboutScrolItem.swift; path = About/AboutScrolItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,7 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				058113B21BEA60EE00C0572A /* AppDelegate.swift */,
-				058113B41BEA60EE00C0572A /* FirstViewController.swift */,
+				05F342811BEF1CAC00B75C84 /* About */,
 				058113D41BEA79D200C0572A /* PyramidOfDoom */,
 				05F3427A1BEE58D900B75C84 /* Contact */,
 				05D4F9E41BEC5DFB001B68CA /* StreedCred */,
@@ -257,6 +259,15 @@
 			name = Contact;
 			sourceTree = "<group>";
 		};
+		05F342811BEF1CAC00B75C84 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				058113B41BEA60EE00C0572A /* AboutVC.swift */,
+				05F342821BEF1CDC00B75C84 /* AboutScrolItem.swift */,
+			);
+			name = About;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -372,6 +383,7 @@
 				05C5FF061BED8C3200078954 /* PoDTimers.swift in Sources */,
 				05D4F9E11BEB9EA5001B68CA /* StatsScreen.swift in Sources */,
 				058113D61BEA79F200C0572A /* ChoicePresenter.swift in Sources */,
+				05F342831BEF1CDC00B75C84 /* AboutScrolItem.swift in Sources */,
 				05D4F9E91BEC613A001B68CA /* SCSegue.swift in Sources */,
 				05536CF71BEAB19B001AE92E /* Randoms.swift in Sources */,
 				05D4F9BA1BEB128F001B68CA /* PeopleAscii.swift in Sources */,
@@ -385,7 +397,7 @@
 				05C5FF011BED7D0100078954 /* ChoicePresets.swift in Sources */,
 				05F342801BEE5B6E00B75C84 /* CallVC.swift in Sources */,
 				05D4F9DF1BEB9B57001B68CA /* EventArt.swift in Sources */,
-				058113B51BEA60EE00C0572A /* FirstViewController.swift in Sources */,
+				058113B51BEA60EE00C0572A /* AboutVC.swift in Sources */,
 				05F3427E1BEE5A8800B75C84 /* TabBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

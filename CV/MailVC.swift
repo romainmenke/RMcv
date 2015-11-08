@@ -11,6 +11,8 @@ import MessageUI
 
 class MailVC: UIViewController, MFMailComposeViewControllerDelegate {
 
+    var mailing : Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,7 +20,15 @@ class MailVC: UIViewController, MFMailComposeViewControllerDelegate {
     }
     
     override func viewDidAppear(animated: Bool) {
-        email()
+        
+        if !mailing {
+            email()
+            mailing = true
+        }
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        
     }
 
     override func didReceiveMemoryWarning() {

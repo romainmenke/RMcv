@@ -49,7 +49,7 @@
         <!--About Me-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="CV" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="AboutVC" customModule="CV" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
@@ -60,7 +60,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="About Me" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="About Me" image="face" id="acW-dT-cKf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
@@ -211,7 +211,7 @@
     </scenes>
     <resources>
         <image name="at" width="40" height="40"/>
-        <image name="first" width="30" height="30"/>
+        <image name="face" width="40" height="40"/>
         <image name="phone" width="40" height="40"/>
         <image name="pyramidImage" width="40" height="40"/>
         <image name="starImage" width="40" height="40"/>

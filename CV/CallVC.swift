@@ -10,14 +10,31 @@ import UIKit
 
 class CallVC: UIViewController {
     
+    var calling : Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
     }
     
+    
     override func viewDidAppear(animated: Bool) {
-        call()
+        print("did appear")
+        if !calling {
+            call()
+            calling = true
+        } else {
+            
+            calling = false
+            
+            guard let window = UIApplication.sharedApplication().windows.first, let tabBar = window.rootViewController as? UITabBarController else {
+                return
+            }
+        
+            tabBar.selectedIndex = 0
+        }
+        
     }
     
     override func didReceiveMemoryWarning() {
