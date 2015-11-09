@@ -44,6 +44,7 @@
 		05F342851BEFC99200B75C84 /* AboutScrollItemImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F342841BEFC99200B75C84 /* AboutScrollItemImage.swift */; };
 		05F342871BF006DB00B75C84 /* AboutScrollItemBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F342861BF006DB00B75C84 /* AboutScrollItemBadge.swift */; };
 		05F3428A1BF00D7800B75C84 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F342891BF00D7800B75C84 /* UIViewExtensions.swift */; };
+		05F3428F1BF04DC200B75C84 /* AboutScroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F3428E1BF04DC200B75C84 /* AboutScroller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,7 @@
 		05F342841BEFC99200B75C84 /* AboutScrollItemImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AboutScrollItemImage.swift; path = About/AboutScrollItemImage.swift; sourceTree = "<group>"; };
 		05F342861BF006DB00B75C84 /* AboutScrollItemBadge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AboutScrollItemBadge.swift; path = About/AboutScrollItemBadge.swift; sourceTree = "<group>"; };
 		05F342891BF00D7800B75C84 /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewExtensions.swift; path = General/UIViewExtensions.swift; sourceTree = "<group>"; };
+		05F3428E1BF04DC200B75C84 /* AboutScroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutScroller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,8 +141,8 @@
 		058113B11BEA60EE00C0572A /* CV */ = {
 			isa = PBXGroup;
 			children = (
-				05F342881BF00D6400B75C84 /* General */,
 				058113B21BEA60EE00C0572A /* AppDelegate.swift */,
+				05F342881BF00D6400B75C84 /* General */,
 				05F342811BEF1CAC00B75C84 /* About */,
 				058113D41BEA79D200C0572A /* PyramidOfDoom */,
 				05F3427A1BEE58D900B75C84 /* Contact */,
@@ -270,6 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				058113B41BEA60EE00C0572A /* AboutVC.swift */,
+				05F3428E1BF04DC200B75C84 /* AboutScroller.swift */,
 				05F342821BEF1CDC00B75C84 /* AboutScrolItemText.swift */,
 				05F342841BEFC99200B75C84 /* AboutScrollItemImage.swift */,
 				05F342861BF006DB00B75C84 /* AboutScrollItemBadge.swift */,
@@ -387,6 +390,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				05D4F9E71BEC5E28001B68CA /* SCButtons.swift in Sources */,
+				05F3428F1BF04DC200B75C84 /* AboutScroller.swift in Sources */,
 				05F342871BF006DB00B75C84 /* AboutScrollItemBadge.swift in Sources */,
 				05F342851BEFC99200B75C84 /* AboutScrollItemImage.swift in Sources */,
 				058113B71BEA60EE00C0572A /* StreetCredVC.swift in Sources */,

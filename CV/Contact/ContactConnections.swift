@@ -16,7 +16,12 @@ extension CallVC {
         guard let url = NSURL(string: "tel://0032485272919") else {
             return
         }
-        UIApplication.sharedApplication().openURL(url)
+        
+        let application:UIApplication = UIApplication.sharedApplication()
+        
+        if (application.canOpenURL(url)) {
+            application.openURL(url)
+        }
     }
 }
 

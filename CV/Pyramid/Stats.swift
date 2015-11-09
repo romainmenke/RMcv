@@ -65,12 +65,12 @@ extension Stats {
     private func getScore() -> Score {
     
         var gameScore : Int = 0
-        gameScore += slaves
+        gameScore += slaves * 2
         gameScore += guards * 10
         gameScore -= rebels * 10
-        gameScore += followers * 20
+        gameScore += followers * 50
         gameScore += food
-        gameScore += yearsLeft * 100
+        gameScore += yearsLeft * 500
         
         let score = Score(cats: cats, life: yearsLeft, game: gameScore)
         return score
@@ -135,7 +135,7 @@ extension Stats {
                 
                 tempSpeed += result
             }
-            return (1000 / tempSpeed) / 1.7 // last divider is for balance. Increase to Speed Up, Decrease to Slow Down. Default is 1.7
+            return (1000 / tempSpeed) / 1.3 // last divider is for balance. Increase to Speed Up, Decrease to Slow Down. Default is 1.7
         }
     }
 }

@@ -8,6 +8,7 @@
 
 import UIKit
 
+// more static design
 
 class ATextScrollItem : UIView {
     
@@ -34,18 +35,10 @@ class ATextScrollItem : UIView {
     }
     
     // but is it really convenient?
-    convenience init(containerSize: CGSize, lastFrame: CGRect? = nil) {
+    convenience init(containerSize: CGSize) {
         
-        guard let uwLastFrame = lastFrame else {
-            self.init(frame: CGRect(x: 0, y: 0, width: containerSize.width, height: 100))
-            return
-        }
-        
-        var frame = uwLastFrame
-        frame.origin.y += frame.size.height
-        
-        self.init(frame: frame)
-        
+        self.init(frame: CGRect(x: 0, y: 0, width: containerSize.width, height: 100))
+
     }
 
     required init?(coder aDecoder: NSCoder) {

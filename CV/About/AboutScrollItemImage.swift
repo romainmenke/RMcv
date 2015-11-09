@@ -8,6 +8,7 @@
 
 import UIKit
 
+// more static design
 
 class AImageScrollItem : UIImageView {
     

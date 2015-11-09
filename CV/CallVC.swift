@@ -20,7 +20,6 @@ class CallVC: UIViewController {
     
     
     override func viewDidAppear(animated: Bool) {
-        print("did appear")
         if !calling {
             call()
             calling = true
@@ -36,6 +35,7 @@ class CallVC: UIViewController {
         }
         
     }
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
