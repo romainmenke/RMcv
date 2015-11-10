@@ -43,9 +43,10 @@ class PDTimer : NSObject {
     
 }
 
+// invalidate PDTimer
 extension PDTimer {
     
-    internal func invalidate() {
+    func invalidate() {
         
         if let uwTimer = timer {
             uwTimer.invalidate()
@@ -56,6 +57,7 @@ extension PDTimer {
         }
         
         running = false
+        paused = false
         timer = nil
         resumeTimer = nil
         
@@ -63,28 +65,41 @@ extension PDTimer {
 }
 
 
+// start PDTimer
 extension PDTimer {
     
-    internal func start() {
+    func start() {
+        
+        // prevent duplicate timers
         if !running {
-            startTimer(timerInterval: timeInterval)
+            
+            // set bools
             paused = false
             running = true
+            
+            // record start time
+            lastShot = NSDate()
+            // schedule timer
+            timer = NSTimer.scheduledTimerWithTimeInterval(timeInterval, target: self, selector: Selector("fire"), userInfo: nil, repeats: repeats)
         }
     }
-    
-    func startTimer(timerInterval timerInterval_I:NSTimeInterval) {
-        lastShot = NSDate()
-        timer = NSTimer.scheduledTimerWithTimeInterval(timerInterval_I, target: self, selector: Selector("fire"), userInfo: nil, repeats: repeats)
-    }
+
     
     func fire() {
+        // record execution time
         lastShot = NSDate()
+        
+        // if (running == false) dont execute
+        if !running {
+            return
+        }
+        
+        // execute
         selector()
     }
 }
 
-
+// pause PDTimer
 extension PDTimer {
     
     internal func pause() {
@@ -100,22 +115,42 @@ extension PDTimer {
         }
         
         paused = true
+        running = false
         
     }
     
     internal func resume() {
         
-        paused = false
-        guard let uwResumeTimeInterval = resumeTimeInterval else {
+        if !paused {
             return
         }
         
+        // set paused to false
+        paused = false
+        running = true
+        
+        // check that there is a previous interval
+        guard let uwResumeTimeInterval = resumeTimeInterval else {
+            start() // else start normal interval
+            return
+        }
+        
+        // start resumt timer
         resumeTimer = NSTimer.scheduledTimerWithTimeInterval(uwResumeTimeInterval, target: self, selector: Selector("executeOnceAndResume"), userInfo: nil, repeats: false)
     }
     
     internal func executeOnceAndResume() {
+        // register date
         lastShot = NSDate()
+        
+        // if (running == false) dont execute
+        if !running {
+            return
+        }
+        
         selector()
+        
+        running = false
         start()
         
     }

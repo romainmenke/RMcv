@@ -15,9 +15,6 @@ class EventAscii: UITextView {
     
     var timer : NSTimer
     
-    let sandColor = UIColor(red: 1.0, green: 0.9, blue: 0.4, alpha: 1.0)
-    let darkSandColor = UIColor(red: 0.7, green: 0.5, blue: 0.2, alpha: 1.0)
-    
     var counter : Int = 0
     var maxCounter : Int = 0
     
@@ -37,7 +34,7 @@ class EventAscii: UITextView {
         self.selectable = false
         self.scrollEnabled = false
 
-        self.textColor = darkSandColor
+        self.textColor = PyramidOfDoomVC.darkSandColor
         self.clipsToBounds = false
         self.backgroundColor = UIColor.clearColor()
         
@@ -49,7 +46,7 @@ class EventAscii: UITextView {
     
     func start() {
         
-        timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: Selector("loopMove"), userInfo: nil, repeats: true)
+        timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: Selector("eventAnimation"), userInfo: nil, repeats: true)
     }
     
     func stop() {
@@ -84,7 +81,7 @@ class EventAscii: UITextView {
     }
     
     
-    func loopMove() {
+    func eventAnimation() {
         if self.eventArt.forwards {
             self.text = moveStringForward(self.text)
         } else {

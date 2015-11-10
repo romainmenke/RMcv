@@ -10,6 +10,22 @@ import UIKit
 
 
 extension PyramidOfDoomVC {
+    
+    func result() {
+        
+        cleanUp()
+        
+        newScore(currentStats.score)
+        
+        let resultView = ScoreScreen(containerSize: self.view.frame.size, stats: currentStats)
+        resultView.delegate = self
+        self.view.addSubview(resultView)
+        
+    }
+}
+
+
+extension PyramidOfDoomVC {
     /**
      Compare new score to high score and save if newer is higher
      */

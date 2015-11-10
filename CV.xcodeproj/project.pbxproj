@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		050A4E631BF197290011587C /* PoDEventHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050A4E621BF197290011587C /* PoDEventHandling.swift */; };
 		05536CF51BEAA648001AE92E /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05536CF41BEAA648001AE92E /* Stats.swift */; };
 		05536CF71BEAB19B001AE92E /* Randoms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05536CF61BEAB19B001AE92E /* Randoms.swift */; };
 		058113B31BEA60EE00C0572A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058113B21BEA60EE00C0572A /* AppDelegate.swift */; };
@@ -58,6 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		050A4E621BF197290011587C /* PoDEventHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PoDEventHandling.swift; path = Pyramid/PoDEventHandling.swift; sourceTree = "<group>"; };
 		05536CF41BEAA648001AE92E /* Stats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Stats.swift; path = Pyramid/Stats.swift; sourceTree = "<group>"; };
 		05536CF61BEAB19B001AE92E /* Randoms.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Randoms.swift; path = Pyramid/Randoms.swift; sourceTree = "<group>"; };
 		058113AF1BEA60EE00C0572A /* CV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CV.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -212,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				05D4F9D71BEB8C1E001B68CA /* PyramidOfDoomVC.swift */,
+				050A4E621BF197290011587C /* PoDEventHandling.swift */,
 				05D4F9F01BECFA9A001B68CA /* PoDHighScoreSaver.swift */,
 				05C5FF051BED8C3200078954 /* PoDTimers.swift */,
 			);
@@ -415,6 +418,7 @@
 				05F3428A1BF00D7800B75C84 /* UIViewExtensions.swift in Sources */,
 				05536CF51BEAA648001AE92E /* Stats.swift in Sources */,
 				05D4F9D81BEB8C1E001B68CA /* PyramidOfDoomVC.swift in Sources */,
+				050A4E631BF197290011587C /* PoDEventHandling.swift in Sources */,
 				05F342791BEDBD1000B75C84 /* ScoreScreen.swift in Sources */,
 				058113D81BEA859200C0572A /* Choice.swift in Sources */,
 				05C5FEFC1BED2B3A00078954 /* PDTimer.swift in Sources */,

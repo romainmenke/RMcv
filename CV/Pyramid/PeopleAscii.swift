@@ -12,17 +12,11 @@ import UIKit
 
 class PeopleAscii: UITextView {
     
-    var timer : NSTimer
-    
-    let sandColor = UIColor(red: 1.0, green: 0.9, blue: 0.4, alpha: 1.0)
-    let darkSandColor = UIColor(red: 0.7, green: 0.5, blue: 0.2, alpha: 1.0)
-    
     let stone = "\u{25A0}"
     var peopleArt : String
     
     init(frame: CGRect) {
         
-        self.timer = NSTimer()
         peopleArt = "\(stone),,,,,,,,,                                   "
         
         super.init(frame: frame, textContainer: nil)
@@ -32,7 +26,7 @@ class PeopleAscii: UITextView {
         self.scrollEnabled = false
         
         self.text = peopleArt
-        self.textColor = darkSandColor
+        self.textColor = PyramidOfDoomVC.darkSandColor
         self.clipsToBounds = false
         self.backgroundColor = UIColor.clearColor()
         
@@ -41,14 +35,7 @@ class PeopleAscii: UITextView {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    func start() {
-        timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: Selector("loopMove"), userInfo: nil, repeats: true)
-    }
-    
-    func stop() {
-        timer.invalidate()
-    }
+
     
     func moveStringForward(string:String) -> String {
         let tail = string.substringToIndex(string.endIndex.predecessor())
@@ -58,7 +45,7 @@ class PeopleAscii: UITextView {
     }
 
     
-    func loopMove() {
+    func movePeople() {
         self.text = moveStringForward(self.text)
     }
     

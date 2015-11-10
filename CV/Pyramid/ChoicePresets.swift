@@ -94,8 +94,6 @@ extension Choice {
         betaAnimation: EventArt.army
     )
     
-    
-    
     static let anotherDay = Choice(title: "A Quiet Day",
         alpha: "Take A Lot Of Naps",
         beta: "Demand Entertainment",
@@ -128,6 +126,24 @@ extension Choice {
         beta: "Have a Galactic party",
         alphaResult: Stats(slaves: 200, guards: 0, rebels: 0, followers: 0, plagues: 0, food: 0, gold: 0, yearsLeft: 0, cats: 0),
         betaResult: Stats(slaves: 0, guards: 0, rebels: -50, followers: 50, plagues: 0, food: -50, gold: 0, yearsLeft: 5, cats: 0),
+        alphaAnimation: nil,
+        betaAnimation: nil
+    )
+    
+    static let stargate = Choice(title: "Stargate was found",
+        alpha: "Bury it",
+        beta: "Use it as a table",
+        alphaResult: Stats(slaves: 0, guards: 0, rebels: 0, followers: 0, plagues: 0, food: 0, gold: 0, yearsLeft: 0, cats: 0),
+        betaResult: Stats(slaves: 200, guards: 0, rebels: 0, followers: 100, plagues: 0, food: 0, gold: 0, yearsLeft: -5, cats: 0),
+        alphaAnimation: nil,
+        betaAnimation: nil
+    )
+    
+    static let snow = Choice(title: "It snows",
+        alpha: "Build snow pyramid",
+        beta: "Invent ice cream",
+        alphaResult: Stats(slaves: 0, guards: 0, rebels: 0, followers: 100, plagues: 0, food: 0, gold: 0, yearsLeft: 0, cats: 0),
+        betaResult: Stats(slaves: 0, guards: 0, rebels: -50, followers: 0, plagues: 0, food: 100, gold: 0, yearsLeft: 0, cats: 0),
         alphaAnimation: nil,
         betaAnimation: nil
     )

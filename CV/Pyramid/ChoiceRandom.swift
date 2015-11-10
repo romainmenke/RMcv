@@ -12,7 +12,7 @@ import Foundation
 extension Choice {
     
     // container for past events to prevent duplicates
-    static var presetChoices : [Int] = [0,1,2,3,4,5,6,7,8,9,10,11,12]
+    static var presetChoices : [Int] = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14]
     
     static func randomChoice() -> Choice {
         
@@ -47,6 +47,10 @@ extension Choice {
             return Choice.bob
         case 12 :
             return Choice.aliens
+        case 13 :
+            return Choice.stargate
+        case 14 :
+            return Choice.snow
         default :
             return Choice.birthday
         }

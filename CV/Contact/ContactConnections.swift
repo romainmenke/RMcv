@@ -45,7 +45,7 @@ extension MailVC {
         
         
         if let highScore = getSaveData() {
-            mailComposerVC.setMessageBody("Your message goes here \n \n \n \n \n Pyramid of Doom score : \(highScore.gameScore)", isHTML: false)
+            mailComposerVC.setMessageBody("Your message goes here \n \n \n \n \n Pyramid of Doom highscore : \(highScore.gameScore)", isHTML: false)
         } else {
             mailComposerVC.setMessageBody("Your message goes here", isHTML: false)
         }
@@ -54,7 +54,7 @@ extension MailVC {
         mailComposerVC.setToRecipients(["romainmenke@me.com"])
         mailComposerVC.setSubject("We saw your CV and...")
         
-        return mailComposerVC
+        return mailComposerVC 
     }
     
     private func showSendMailErrorAlert() {

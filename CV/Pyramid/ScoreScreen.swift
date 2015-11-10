@@ -9,9 +9,10 @@
 import UIKit
 
 
-class ScoreScreen : UIView {
+class ScoreScreen : UIView, UIGestureRecognizerDelegate {
     
     var resultLabel : UITextView
+    var delegate : ScoreScreenDelegate?
 
     let font = UIFont(name: "Courier-Bold", size: UIFont.systemFontSize())
     
@@ -32,7 +33,11 @@ class ScoreScreen : UIView {
         resultLabel.text = generateResultText(stats)
         
         self.addSubview(resultLabel)
-        self.backgroundColor = UIColor.clearColor()
+        self.backgroundColor = PyramidOfDoomVC.sandColor
+        
+        let tap = UITapGestureRecognizer(target: self, action: Selector("tapped"))
+        tap.delegate = self
+        self.addGestureRecognizer(tap)
         
     }
     
@@ -40,7 +45,15 @@ class ScoreScreen : UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
+    func tapped() {
+        
+        print("tapped")
+        guard let del = self.delegate else {
+            return
+        }
+        del.dismissScoreScreen()
+        
+    }
 }
 
 
@@ -57,7 +70,13 @@ extension ScoreScreen {
             return "You failed to finish your Pyramid.\n\nThe \(stats.rebels) rebels succeeded in disrupting your reign.\n\nYour \(stats.guards) guards and your \(stats.followers) followers were quick to denounce you.\n\nYour \(stats.cats) cats did remain faithful to you until your \(stats.food) cans of tuna ran out.\n\nA highscore of \(stats.score.gameScore) will be quickly eroded by the sands"
             
         }
-        
     }
+}
+
+
+protocol ScoreScreenDelegate{
+    
+    func dismissScoreScreen()
     
 }
+
