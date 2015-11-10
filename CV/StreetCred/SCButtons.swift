@@ -25,7 +25,7 @@ extension StreetCredVC {
         // git hub button
         gButton = UIButton(frame: CGRect(x: -200 * self.rW, y: 50 * self.rH, width: 30 * self.rW, height: 30 * self.rW))
         gButton.addTarget(self, action: Selector("gPress"), forControlEvents: .TouchUpInside)
-        styleButton(gButton,title: "G")
+        styleButton(gButton,title: "GH")
         
         // stack overflow buttom
         sButton = UIButton(frame: CGRect(x: self.view.frame.width + 100, y: self.view.frame.height + 100, width: 30 * self.rW, height: 30 * self.rW))
