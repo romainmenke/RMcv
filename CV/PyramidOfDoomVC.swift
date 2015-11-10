@@ -45,8 +45,6 @@ class PyramidOfDoomVC: UIViewController, PyramidDelegate, ChoiceDelegate, ScoreS
 
         setup()
         
-        setupTimers()
-        startTimers()
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -97,7 +95,8 @@ extension PyramidOfDoomVC {
         
         choiceView = nil
         
-        alive = true
+        alive = false
+        gameOngoing = false
         
     }
     
@@ -112,6 +111,12 @@ extension PyramidOfDoomVC {
         
         statsScreen = StatsScreen(frame: self.view.frame)
         statsScreen!.updateStats(currentStats)
+        
+        alive = true
+        gameOngoing = true
+        
+        setupTimers()
+        startTimers()
         
         self.view.addSubview(pyramid!)
         self.view.addSubview(people!)
@@ -129,11 +134,8 @@ extension PyramidOfDoomVC {
     func dismissScoreScreen() {
         cleanUp()
         setup()
-        
-        setupTimers()
-        startTimers()
+
     }
-    
 }
 
 
