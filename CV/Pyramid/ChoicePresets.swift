@@ -36,8 +36,8 @@ extension Choice {
         beta: "Go On Vacation",
         alphaResult: Stats(slaves: +50, guards: -200, rebels: 0, followers: 0, plagues: 0, food: 0, gold: 0, yearsLeft: 0, cats: 0),
         betaResult: Stats(slaves: -50, guards: -50, rebels: 0, followers: 0, plagues: 0, food: -50, gold: -50, yearsLeft: 0, cats: 0),
-        alphaAnimation: EventArt.army,
-        betaAnimation: EventArt.barbarians
+        alphaAnimation: EventArt.army(),
+        betaAnimation: EventArt.barbarians()
     )
     
     static let rebellion = Choice(title: "Rebellion",
@@ -91,7 +91,7 @@ extension Choice {
         alphaResult: Stats(slaves: 0, guards: 0, rebels: 0, followers: 0, plagues: 0, food: 0, gold: 0, yearsLeft: 5, cats: 0),
         betaResult: Stats(slaves: 100, guards: -200, rebels: 0, followers: 50, plagues: 0, food: 0, gold: 0, yearsLeft: 0, cats: 0),
         alphaAnimation: nil,
-        betaAnimation: EventArt.army
+        betaAnimation: EventArt.army()
     )
     
     static let anotherDay = Choice(title: "A Quiet Day",

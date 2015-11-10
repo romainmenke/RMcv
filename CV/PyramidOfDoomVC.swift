@@ -10,11 +10,15 @@ import UIKit
 
 class PyramidOfDoomVC: UIViewController, PyramidDelegate, ChoiceDelegate, ScoreScreenDelegate {
     
-    static let sandColor = UIColor(red: 1.0, green: 0.9, blue: 0.4, alpha: 1.0)
-    static let darkSandColor = UIColor(red: 0.7, green: 0.5, blue: 0.2, alpha: 1.0)
+    class func sandColor() -> UIColor {
+        return UIColor(red: 1.0, green: 0.9, blue: 0.4, alpha: 1.0)
+    }
+    class func darkSandColor() -> UIColor {
+        return UIColor(red: 0.7, green: 0.5, blue: 0.2, alpha: 1.0)
+    }
     
     // stats
-    var currentStats = Stats.startingStats
+    var currentStats = Stats.startingStats()
     
     // timers
     var yearTimer : PDTimer?
@@ -102,7 +106,7 @@ extension PyramidOfDoomVC {
     
     func setup() {
         
-        currentStats = Stats.startingStats
+        currentStats = Stats.startingStats()
         
         pyramid = PyramidAscii(frame: CGRect(x: 100, y: 150, width: 120, height: 110))
         pyramid!.builderDelegate = self
@@ -122,7 +126,7 @@ extension PyramidOfDoomVC {
         self.view.addSubview(people!)
         self.view.addSubview(statsScreen!)
         
-        self.view.backgroundColor = PyramidOfDoomVC.sandColor
+        self.view.backgroundColor = PyramidOfDoomVC.sandColor()
         
     }
     

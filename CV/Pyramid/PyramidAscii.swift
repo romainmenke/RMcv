@@ -27,8 +27,8 @@ class PyramidAscii: UITextView {
         self.scrollEnabled = false
         
         self.text = pyramidArt as String
-        self.textColor = PyramidOfDoomVC.sandColor
-        self.backgroundColor = PyramidOfDoomVC.sandColor
+        self.textColor = PyramidOfDoomVC.sandColor()
+        self.backgroundColor = PyramidOfDoomVC.sandColor()
         
         let stringRange = pyramidArt.rangeOfString(pyramidArt as String)
         self.currentColoredRange = NSRange(location: stringRange.length - 1, length: 1)
@@ -43,8 +43,8 @@ class PyramidAscii: UITextView {
     func colorRangeOfString(string: String, range:NSRange) -> NSAttributedString {
         
         let attrString: NSMutableAttributedString = NSMutableAttributedString(string: string)
-        attrString.addAttribute(NSForegroundColorAttributeName, value: PyramidOfDoomVC.darkSandColor, range: range)
-        attrString.addAttribute(NSForegroundColorAttributeName, value: PyramidOfDoomVC.sandColor, range: NSRange(location: 0, length: range.location))
+        attrString.addAttribute(NSForegroundColorAttributeName, value: PyramidOfDoomVC.darkSandColor(), range: range)
+        attrString.addAttribute(NSForegroundColorAttributeName, value: PyramidOfDoomVC.sandColor(), range: NSRange(location: 0, length: range.location))
         
         return attrString
         

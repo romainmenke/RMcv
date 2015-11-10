@@ -18,7 +18,7 @@ class EventAscii: UITextView {
     var counter : Int = 0
     var maxCounter : Int = 0
     
-    var eventArt : EventArt = EventArt.army
+    var eventArt : EventArt = EventArt.army()
     
     init(frame: CGRect, animation: EventArt) {
         
@@ -34,7 +34,7 @@ class EventAscii: UITextView {
         self.selectable = false
         self.scrollEnabled = false
 
-        self.textColor = PyramidOfDoomVC.darkSandColor
+        self.textColor = PyramidOfDoomVC.darkSandColor()
         self.clipsToBounds = false
         self.backgroundColor = UIColor.clearColor()
         

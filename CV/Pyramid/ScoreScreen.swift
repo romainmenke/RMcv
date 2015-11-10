@@ -33,7 +33,7 @@ class ScoreScreen : UIView, UIGestureRecognizerDelegate {
         resultLabel.text = generateResultText(stats)
         
         self.addSubview(resultLabel)
-        self.backgroundColor = PyramidOfDoomVC.sandColor
+        self.backgroundColor = PyramidOfDoomVC.sandColor()
         
         let tap = UITapGestureRecognizer(target: self, action: Selector("tapped"))
         tap.delegate = self

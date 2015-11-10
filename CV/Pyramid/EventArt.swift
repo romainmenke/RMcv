@@ -14,9 +14,12 @@ struct EventArt {
     var fullString = ""
     var forwards : Bool = true
     
-    static let barbarians = EventArt(eventString: ",``',,``.., ..',`,' ,`,',''`", fullString: ",``',,``.., ..',`,' ,`,',''`                                                         ", forwards: true)
+    static func barbarians() -> EventArt {
+        return EventArt(eventString: ",``',,``.., ..',`,' ,`,',''`", fullString: ",``',,``.., ..',`,' ,`,',''`                                                         ", forwards: true)
+    }
     
-    static let army = EventArt(eventString: "\\\\,,,'',,'',,'',,'',\\\\'',,'',,''", fullString: "                                                         \\\\,,,'',,'',,'',,'',\\\\'',,'',,''", forwards: false)
-    
+    static func army() -> EventArt {
+        return EventArt(eventString: "\\\\,,,'',,'',,'',,'',\\\\'',,'',,''", fullString: "                                                         \\\\,,,'',,'',,'',,'',\\\\'',,'',,''", forwards: false)
+    }
     
 }

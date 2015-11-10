@@ -26,7 +26,7 @@ class PeopleAscii: UITextView {
         self.scrollEnabled = false
         
         self.text = peopleArt
-        self.textColor = PyramidOfDoomVC.darkSandColor
+        self.textColor = PyramidOfDoomVC.darkSandColor()
         self.clipsToBounds = false
         self.backgroundColor = UIColor.clearColor()
         

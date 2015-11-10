@@ -23,12 +23,9 @@ struct Stats {
     // convenience method to get the number of stats, used with subscript.
     let count = 9
     
-    static func startingStatsB() -> Stats {
+    static func startingStats() -> Stats {
         return Stats(slaves: 1000, guards: 200, rebels: 50, followers: 50, plagues: 0, food: 200, gold: 0, yearsLeft: 35, cats: 2)
     }
-    
-    static let startingStats = Stats(slaves: 1000, guards: 200, rebels: 50, followers: 50, plagues: 0, food: 200, gold: 0, yearsLeft: 35, cats: 2)
-    
 }
 
 extension Stats {
