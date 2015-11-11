@@ -30,6 +30,7 @@ class PyramidAscii: UITextView {
         self.textColor = PyramidOfDoomVC.sandColor()
         self.backgroundColor = PyramidOfDoomVC.sandColor()
         
+        
         let stringRange = pyramidArt.rangeOfString(pyramidArt as String)
         self.currentColoredRange = NSRange(location: stringRange.length - 1, length: 1)
         

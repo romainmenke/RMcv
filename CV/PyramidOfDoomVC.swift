@@ -17,6 +17,7 @@ class PyramidOfDoomVC: UIViewController, PyramidDelegate, ChoiceDelegate, ScoreS
         return UIColor(red: 0.7, green: 0.5, blue: 0.2, alpha: 1.0)
     }
     
+    
     // stats
     var currentStats = Stats.startingStats()
     
@@ -108,7 +109,10 @@ extension PyramidOfDoomVC {
         
         currentStats = Stats.startingStats()
         
-        pyramid = PyramidAscii(frame: CGRect(x: 100, y: 150, width: 120, height: 110))
+        let rH = view.frame.height / 100
+        let rW = view.frame.width / 100
+
+        pyramid = PyramidAscii(frame: CGRect(x: (self.view.frame.width - 120) / 2, y: 150, width: 120, height: 110))
         pyramid!.builderDelegate = self
         
         people = PeopleAscii(frame: CGRect(x: 0, y: 230, width: self.view.frame.width, height: 20))

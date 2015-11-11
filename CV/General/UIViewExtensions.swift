@@ -9,28 +9,28 @@
 import UIKit
 
 
-extension UIView {
+extension CGRect {
     
     var bottomLeft : CGPoint {
-        var point = self.frame.origin
-        point.y += self.frame.height
+        var point = origin
+        point.y += height
         return point
     }
     
     var topLeft : CGPoint {
-        return self.frame.origin
+        return origin
     }
     
     var bottomRight : CGPoint {
-        var point = self.frame.origin
-        point.y += self.frame.height
-        point.x += self.frame.width
+        var point = origin
+        point.y += height
+        point.x += width
         return point
     }
     
     var topRight : CGPoint {
-        var point = self.frame.origin
-        point.x += self.frame.width
+        var point = origin
+        point.x += width
         return point
     }
     

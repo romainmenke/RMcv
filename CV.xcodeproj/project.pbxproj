@@ -39,7 +39,6 @@
 		05F342771BEDACB800B75C84 /* MailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F342761BEDACB800B75C84 /* MailVC.swift */; };
 		05F342791BEDBD1000B75C84 /* ScoreScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F342781BEDBD1000B75C84 /* ScoreScreen.swift */; };
 		05F3427C1BEE590800B75C84 /* ContactConnections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F3427B1BEE590800B75C84 /* ContactConnections.swift */; };
-		05F3427E1BEE5A8800B75C84 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F3427D1BEE5A8800B75C84 /* TabBar.swift */; };
 		05F342801BEE5B6E00B75C84 /* CallVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F3427F1BEE5B6E00B75C84 /* CallVC.swift */; };
 		05F342831BEF1CDC00B75C84 /* AboutScrolItemText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F342821BEF1CDC00B75C84 /* AboutScrolItemText.swift */; };
 		05F342851BEFC99200B75C84 /* AboutScrollItemImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F342841BEFC99200B75C84 /* AboutScrollItemImage.swift */; };
@@ -95,7 +94,6 @@
 		05F342761BEDACB800B75C84 /* MailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailVC.swift; sourceTree = "<group>"; };
 		05F342781BEDBD1000B75C84 /* ScoreScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScoreScreen.swift; path = Pyramid/ScoreScreen.swift; sourceTree = "<group>"; };
 		05F3427B1BEE590800B75C84 /* ContactConnections.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactConnections.swift; path = Contact/ContactConnections.swift; sourceTree = "<group>"; };
-		05F3427D1BEE5A8800B75C84 /* TabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		05F3427F1BEE5B6E00B75C84 /* CallVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallVC.swift; sourceTree = "<group>"; };
 		05F342821BEF1CDC00B75C84 /* AboutScrolItemText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AboutScrolItemText.swift; path = About/AboutScrolItemText.swift; sourceTree = "<group>"; };
 		05F342841BEFC99200B75C84 /* AboutScrollItemImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AboutScrollItemImage.swift; path = About/AboutScrollItemImage.swift; sourceTree = "<group>"; };
@@ -154,7 +152,6 @@
 				058113BB1BEA60EE00C0572A /* Assets.xcassets */,
 				058113BD1BEA60EE00C0572A /* LaunchScreen.storyboard */,
 				058113C01BEA60EE00C0572A /* Info.plist */,
-				05F3427D1BEE5A8800B75C84 /* TabBar.swift */,
 			);
 			path = CV;
 			sourceTree = "<group>";
@@ -426,7 +423,6 @@
 				05F342801BEE5B6E00B75C84 /* CallVC.swift in Sources */,
 				05D4F9DF1BEB9B57001B68CA /* EventArt.swift in Sources */,
 				058113B51BEA60EE00C0572A /* AboutVC.swift in Sources */,
-				05F3427E1BEE5A8800B75C84 /* TabBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

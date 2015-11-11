@@ -15,7 +15,9 @@ extension ChoicePresenter {
     func style() {
         self.layer.cornerRadius = 25
         self.clipsToBounds = true
-        self.backgroundColor = UIColor.blackColor()
+        self.backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.8)
+        self.layer.borderColor = darkSandColor.CGColor
+        self.layer.borderWidth = 1.0
     }
 }
 
