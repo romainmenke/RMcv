@@ -12,7 +12,7 @@ import UIKit
 class ScoreScreen : UIView, UIGestureRecognizerDelegate {
     
     var resultLabel : UITextView
-    var delegate : ScoreScreenDelegate?
+    weak var delegate : ScoreScreenDelegate?
 
     let font = UIFont(name: "Courier-Bold", size: UIFont.systemFontSize())
     
@@ -74,7 +74,7 @@ extension ScoreScreen {
 }
 
 
-protocol ScoreScreenDelegate{
+protocol ScoreScreenDelegate : class {
     
     func dismissScoreScreen()
     

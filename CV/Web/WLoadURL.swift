@@ -16,11 +16,11 @@ extension WebVC {
      */
     func loadUrl() {
         
-        guard let uwAddress = address, let url = NSURL(string: uwAddress) else {
+        guard let uwWebView = webView, let uwAddress = address, let url = NSURL(string: uwAddress) else {
             return
         }
         
-        UIWebView.loadRequest(webView)(NSURLRequest(URL: url))
+        UIWebView.loadRequest(uwWebView)(NSURLRequest(URL: url))
         
     }
     

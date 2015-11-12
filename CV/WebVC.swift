@@ -16,18 +16,30 @@ class WebVC: UIViewController {
     var address : String?
     var navTitle : String?
     
+    @IBOutlet weak var constraintsView: UIView!
     @IBOutlet weak var navItem: UINavigationItem!
-    @IBOutlet weak var webView: UIWebView!
+    var webView: UIWebView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        webView = UIWebView(frame: CGRect(origin: CGPointZero, size: constraintsView.frame.size))
+        constraintsView.addSubview(webView!)
+        
         // load url in webview
         loadUrl()
+        
         
         // set title of navigation bar
         if let uwTitle = navTitle {
             navItem.title = uwTitle
+        }
+    }
+
+    override func viewWillDisappear(animated: Bool) {
+        if let uwWebView = webView {
+            uwWebView.removeFromSuperview()
+            webView = nil
         }
     }
     
@@ -37,8 +49,8 @@ class WebVC: UIViewController {
     
 
     override func didReceiveMemoryWarning() {
+
         super.didReceiveMemoryWarning()
-        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     // back button was pressed

@@ -19,7 +19,7 @@ class ChoicePresenter : UIView {
     
     var choice : Choice
     
-    var delegate : ChoiceDelegate?
+    weak var delegate : ChoiceDelegate?
     
     let darkSandColor = UIColor(red: 0.7, green: 0.5, blue: 0.2, alpha: 1.0)
     let sandColor = UIColor(red: 1.0, green: 0.9, blue: 0.4, alpha: 1.0)
@@ -71,7 +71,7 @@ class ChoicePresenter : UIView {
 
 
 // delegate for CP
-protocol ChoiceDelegate {
+protocol ChoiceDelegate : class {
     
     /**
      Delegate function to handle button click
