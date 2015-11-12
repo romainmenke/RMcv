@@ -6,6 +6,8 @@
 //  Copyright © 2015 Romain Menke. All rights reserved.
 //
 
+// proof of concept game to illustrate text as a means to create graphics
+
 import UIKit
 
 class PyramidOfDoomVC: UIViewController, PyramidDelegate, ChoiceDelegate, ScoreScreenDelegate {
