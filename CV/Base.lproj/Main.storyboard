@@ -192,7 +192,6 @@
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="lbs-rt-QHe" kind="relationship" relationship="viewControllers" id="Qws-0l-wWF"/>
                         <segue destination="Dmw-iD-gUV" kind="relationship" relationship="viewControllers" id="G3D-nB-ASG"/>
-                        <segue destination="t82-uj-dIY" kind="relationship" relationship="viewControllers" id="ibe-CI-RrO"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>

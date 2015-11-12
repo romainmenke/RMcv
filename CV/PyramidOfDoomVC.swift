@@ -110,9 +110,6 @@ extension PyramidOfDoomVC {
     func setup() {
         
         currentStats = Stats.startingStats()
-        
-        let rH = view.frame.height / 100
-        let rW = view.frame.width / 100
 
         pyramid = PyramidAscii(frame: CGRect(x: (self.view.frame.width - 120) / 2, y: 150, width: 120, height: 110))
         pyramid!.builderDelegate = self
